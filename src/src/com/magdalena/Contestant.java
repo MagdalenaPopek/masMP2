@@ -25,12 +25,11 @@ public class Contestant {
     private int contestantNumber;
 
     public Contestant(Person person, Competition competition) throws Exception {
-/*        this.person = person;
-        this.competition = competition;*/
+        this.person = person;
+        this.competition = competition;
         this.contestantNumber = counter++;
         this.person.setContestant(this);
         this.competition.setContestant(this);
-        //tutaj muszę zrobić, że obiekty pokażą na środek
     }
 
     public int getContestantNumber() {
