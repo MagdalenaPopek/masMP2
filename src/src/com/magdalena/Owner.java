@@ -31,9 +31,9 @@ public class Owner extends Person{
     public void addHorse(Horse horse) throws Exception {
         if(!ownerHorseMap.containsKey(horse.getPassportNumber())) {
             ownerHorseMap.put(horse.getPassportNumber(), horse);
-            if(!horse.getOwner().equals(this)) {
+//            if(!horse.getOwner().equals(this)) {
                 horse.setOwner(this);
-            }
+ //           }
         }
     }
 

@@ -18,15 +18,24 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        Horse h = new Horse("A", date, "00000", "Klacz");
+        Horse h2 = new Horse("B", date, "99999", "Klacz");
+        Owner alicja = new Owner(new Person("Alicja", "Nowa", date, "1233"), 1275);
+        alicja.addHorse(h);
+        alicja.addHorse(h2);
+        System.out.println(alicja.findHorse("00000"));
+
+
+
+
 /*
-
-
 
 
         // Kompozycja Stajnia <>-- Boks
         System.out.println("-------------------------------");
-        *//*Stable nowaHuta = null;
-        Stall.createStall(nowaHuta);*//*
+        Stable nowaHuta = null;
+        Stall.createStall(nowaHuta);
         Stable stajenka = new Stable("stajenka", "Okopowa 5, Warszawa", "1234567");
         Stall boks1 = Stall.createStall(stajenka);
         Stall boks2 = Stall.createStall(stajenka);
@@ -53,5 +62,6 @@ public class Main {
         Contestant alicjaContestant = new Contestant(alicja, ujezdzenieA);
         System.out.println(alicjaContestant.toString());
 */
+
     }
 }

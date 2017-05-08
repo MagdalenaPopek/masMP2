@@ -68,11 +68,11 @@ public class Horse {
     }
 
     public void setOwner(Owner owner) throws Exception {
-        if(this.owner != null){
-            throw new Exception("Ten koń ma już właściciela");
+        if(this.owner == null) {
+
+            this.owner = owner;
+            owner.addHorse(this);
         }
-        this.owner = owner;
-        owner.addHorse(this);
     }
 
     public void removeOwner(){
